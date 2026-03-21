@@ -1,0 +1,62 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+.eggs/
+
+# Virtual Environment
+venv/
+.venv/
+env/
+ENV/
+
+# Environment Variables
+.env
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# PostgreSQL
+*.sql.bak
+
+# Model Artifacts
+models/genre_classifier/saved/*.pkl
+models/genre_classifier/saved/*.pt
+models/genre_classifier/saved/*.npz
+*.joblib
+
+# Audio / Data files
+*.mp3
+*.flac
+*.wav
+*.m4a
+data/raw/
+data/processed/
+
+# Logs
+*.log
+logs/
+
+# Docker
+.dockerignore
+
+# YT Music Auth (contains sensitive headers)
+ytmusic_auth.json
+ytmusic_oauth.json
+
+tests/
+music_library/
