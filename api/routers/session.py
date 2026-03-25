@@ -45,7 +45,7 @@ def start_session():
 
 @router.post("/{session_id}/track")
 def log_track_play(session_id: str, payload: TrackPlayRequest):
-    """Log a song play event within a session."""
+    """Log a song play event and update the bandit in real time."""
     db = SessionLocal()
     try:
         record = ListeningHistory(
@@ -60,15 +60,29 @@ def log_track_play(session_id: str, payload: TrackPlayRequest):
         )
         db.add(record)
 
-        # Update session song count
         session = db.query(Session).filter_by(session_id=session_id).first()
         if session:
             session.song_count = (session.song_count or 0) + 1
 
         db.commit()
-        return {"status": "logged", "song_id": payload.song_id}
+
     finally:
         db.close()
+
+    # Update bandit AFTER DB commit — async-safe
+    from models.bandit import update_bandit, compute_reward
+    reward = compute_reward(
+        payload.play_duration_ms,
+        payload.song_duration_ms,
+        payload.skipped,
+    )
+    update_bandit(payload.song_id, reward)
+
+    return {
+        "status":  "logged",
+        "song_id": payload.song_id,
+        "reward":  reward,
+    }
 
 
 @router.post("/{session_id}/end")

@@ -91,11 +91,17 @@ def get_hybrid_recommendations(top_n: int = 20) -> list[dict]:
             blended.append({**meta, "score": round(final, 6)})
 
         blended.sort(key=lambda x: x["score"], reverse=True)
+        top_candidates = blended[:top_n * 2]   # Get 2× for bandit to rerank
+
+        # Re-rank with bandit UCB scores
+        from models.bandit import rerank_with_bandit
+        final = rerank_with_bandit(top_candidates, top_n=top_n)
+
         logger.info(
-            f"Hybrid recommendations: {len(blended)} candidates "
+            f"Hybrid+Bandit: {len(final)} recommendations "
             f"(CB={'✅' if cb_norm else '❌'}, ALS={'✅' if als_norm else '❌'})"
         )
-        return blended[:top_n]
+        return final
 
     finally:
         db.close()

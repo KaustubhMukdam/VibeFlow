@@ -88,7 +88,7 @@ class BanditState(Base):
     __tablename__ = "bandit_state"
 
     song_id      = Column(String(255), ForeignKey("songs.song_id", ondelete="CASCADE"), primary_key=True)
-    A_matrix     = Column(JSONB, nullable=False)
+    a_matrix     = Column(JSONB, nullable=False)    
     b_vector     = Column(JSONB, nullable=False)
     play_count   = Column(Integer, default=0)
     skip_count   = Column(Integer, default=0)
