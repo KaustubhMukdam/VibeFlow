@@ -62,3 +62,7 @@ tests/
 music_library/
 datasets/
 run_cleanup.py
+oauth.json
+ytmusic_auth.json
+setup_ytmusic.py
+generate_mock_history.py

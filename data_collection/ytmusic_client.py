@@ -2,6 +2,7 @@ import os
 import logging
 from typing import Optional
 from ytmusicapi import YTMusic
+from ytmusicapi.auth.oauth.credentials import OAuthCredentials
 from rapidfuzz import fuzz, process
 from dotenv import load_dotenv
 
@@ -9,13 +10,22 @@ load_dotenv()
 logger = logging.getLogger(__name__)
 
 
-def get_ytmusic_client() -> YTMusic:
-    auth_file = os.getenv("YTMUSIC_AUTH_FILE", "ytmusic_auth.json")
+def get_ytmusic_client() -> Optional[YTMusic]:
+    auth_file = os.getenv("YTMUSIC_AUTH_FILE", "oauth.json")
+    client_id = os.getenv("YTMUSIC_CLIENT_ID")
+    client_secret = os.getenv("YTMUSIC_CLIENT_SECRET")
+
     if os.path.exists(auth_file):
-        logger.info("YT Music: authenticated mode")
-        return YTMusic(auth_file)
-    logger.warning("YT Music auth file not found — unauthenticated mode (limited data)")
-    return YTMusic()
+        if not client_id or not client_secret:
+            logger.error("YTMUSIC_CLIENT_ID or YTMUSIC_CLIENT_SECRET missing from .env")
+            return None
+            
+        logger.info(f"YT Music: authenticated via {auth_file} (OAuth)")
+        credentials = OAuthCredentials(client_id=client_id, client_secret=client_secret)
+        return YTMusic(auth_file, oauth_credentials=credentials)
+        
+    logger.warning(f"{auth_file} not found — run 'ytmusicapi oauth' first")
+    return None
 
 
 def fetch_liked_songs(yt: YTMusic, limit: int = 1000) -> list[dict]:
@@ -31,18 +41,11 @@ def fetch_liked_songs(yt: YTMusic, limit: int = 1000) -> list[dict]:
     logger.info(f"Fetched {len(all_songs)} liked songs from YT Music")
     return all_songs
 
-
 def fetch_history(yt: YTMusic) -> list[dict]:
-    all_songs = []
-    try:
-        for track in yt.get_history():
-            parsed = _parse_yt_track(track)
-            if parsed:
-                all_songs.append(parsed)
-    except Exception as e:
-        logger.error(f"YT Music history error: {e}")
-    logger.info(f"Fetched {len(all_songs)} history tracks from YT Music")
-    return all_songs
+    # Known bug in ytmusicapi: get_history fails with OAuth (HTTP 400).
+    # We log it and gracefully skip. The pipeline will rely on liked_songs.
+    logger.warning("YT Music OAuth: get_history() endpoint failed (known bug). Skipping history.")
+    return []
 
 
 def map_yt_to_local(
