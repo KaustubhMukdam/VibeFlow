@@ -91,7 +91,7 @@
 - [ ] Run classifier on all 500–600 local songs `[1 hr]`
 - [ ] Save genre label + confidence to `songs` table `[30 min]`
 - [ ] Add `GET /library/genres` endpoint (genre distribution breakdown) `[30 min]`
-- [ ] Add genre distribution pie chart in Streamlit dashboard `[1 hr]`
+- [ ] Add genre distribution pie chart in React dashboard `[1 hr]`
  
 ---
  
@@ -188,9 +188,9 @@
  
 ## 🖥️ PHASE 6 — Dashboard & Notifications
  
-### Streamlit Dashboard
+### React Dashboard
  
-- [ ] Set up base Streamlit app with sidebar navigation `[1 hr]`
+- [ ] Set up base React app with sidebar navigation `[1 hr]`
 - [ ] Page: **Today's Pick** — display daily song recommendation `[1 hr]`
 - [ ] Page: **Weekend Playlist** — display current playlist as cards `[1 hr]`
 - [ ] Page: **Taste Profile** — audio feature radar chart (energy, valence, etc.) `[2 hr]`
@@ -212,11 +212,11 @@
 ## 🐳 PHASE 7 — Containerization & Final Polish
  
 - [ ] Write `Dockerfile` for FastAPI service `[1 hr]`
-- [ ] Write `Dockerfile` for Streamlit service `[30 min]`
+- [ ] Write `Dockerfile` for React service `[30 min]`
 - [ ] Update `docker-compose.yml`:
   - [ ] PostgreSQL service with volume mount `[30 min]`
   - [ ] FastAPI service with `env_file` `[30 min]`
-  - [ ] Streamlit service `[30 min]`
+  - [ ] React service `[30 min]`
   - [ ] Telegram bot service `[30 min]`
 - [ ] Add health checks to all services `[30 min]`
 - [ ] Write `pytest` tests:
