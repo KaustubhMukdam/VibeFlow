@@ -99,8 +99,9 @@ def train_als(factors: int = 64, iterations: int = 20, regularization: float = 0
             calculate_training_loss=True,
             random_state=42,
         )
-        # implicit expects item×user matrix
-        model.fit(matrix.T.tocsr(), show_progress=True)
+        
+        # FIX: Pass 'matrix' directly (user x item) instead of transposing it.
+        model.fit(matrix, show_progress=True)
 
         Path("models/saved").mkdir(parents=True, exist_ok=True)
         with open(ALS_MODEL_PATH, "wb") as f:
@@ -131,18 +132,23 @@ def get_als_recommendations(top_n: int = 50) -> list[dict]:
         with open(ALS_MAPPINGS_PATH, "rb") as f:
             mappings = pickle.load(f)
 
-        song_ids    = mappings["song_ids"]
+        song_ids = mappings["song_ids"]
         song_to_idx = mappings["song_to_idx"]
 
         matrix, _, _ = _build_interaction_matrix(db)
         if matrix is None:
             return []
 
+        # FIX: Ensure we don't request more items than the model was trained on
+        safe_top_n = min(top_n + 20, len(song_ids))
+        if safe_top_n <= 0:
+            return []
+
         # Recommend for user 0
         item_ids, scores = model.recommend(
             0,
             matrix,
-            N=top_n + 20,   # Fetch extra to allow filtering
+            N=safe_top_n, 
             filter_already_liked_items=True,
         )
 
@@ -155,10 +161,10 @@ def get_als_recommendations(top_n: int = 50) -> list[dict]:
             if song:
                 results.append({
                     "song_id": sid,
-                    "title":   song.title,
-                    "artist":  song.artist,
-                    "genre":   song.genre,
-                    "score":   round(float(score), 6),
+                    "title": song.title,
+                    "artist": song.artist,
+                    "genre": song.genre,
+                    "score": round(float(score), 6),
                 })
             if len(results) >= top_n:
                 break

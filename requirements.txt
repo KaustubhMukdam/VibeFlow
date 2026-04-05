@@ -1,5 +1,4 @@
 # ─── Web API & Data Collection ───────────────
-spotipy==2.25.2
 ytmusicapi==1.10.3
 mutagen==1.47.0
 rapidfuzz==3.13.0

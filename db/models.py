@@ -4,6 +4,7 @@ from sqlalchemy import (
 )
 from sqlalchemy.dialects.postgresql import JSONB
 from sqlalchemy.orm import declarative_base, relationship
+from sqlalchemy.ext.hybrid import hybrid_property
 from sqlalchemy.sql import func
 
 Base = declarative_base()
@@ -76,6 +77,13 @@ class ListeningHistory(Base):
 
     song    = relationship("Song", back_populates="history")
     session = relationship("Session", back_populates="history")
+
+    @hybrid_property
+    def completion_pct(self):
+        """Percentage of the song that was played (0–100). Matches schema.sql."""
+        if self.song_duration_ms and self.song_duration_ms > 0 and self.play_duration_ms is not None:
+            return round((self.play_duration_ms / self.song_duration_ms) * 100, 2)
+        return None
 
     __table_args__ = (
         Index("idx_history_played_at", "played_at"),

@@ -15,7 +15,7 @@ import numpy as np
 import json
 from typing import Optional
 from db import SessionLocal
-from db.models import BanditState, Song
+from db.models import BanditState, Song, ListeningHistory
 
 logger = logging.getLogger(__name__)
 
@@ -179,5 +179,65 @@ def rerank_with_bandit(candidates: list[dict], top_n: int = 20) -> list[dict]:
         reranked.sort(key=lambda x: x["final_score"], reverse=True)
         return reranked[:top_n]
 
+    finally:
+        db.close()
+
+
+def select_next_songs(
+    session_id: str,
+    count: int = 3,
+) -> list[dict]:
+    """
+    Bandit actively selects the next best songs for a session queue.
+    Excludes songs already played in this session.
+    Uses hybrid recommendations as candidates, then picks via UCB.
+
+    This is the core "GET /session/{id}/next" feature from PLANNING.md.
+    """
+    db = SessionLocal()
+    try:
+        # Get songs already played in this session
+        played = (
+            db.query(ListeningHistory.song_id)
+            .filter(ListeningHistory.session_id == session_id)
+            .all()
+        )
+        played_ids = {p.song_id for p in played}
+
+        # Get all candidate songs
+        candidates = db.query(Song).filter(
+            Song.source.in_(["local", "ytmusic_only"]),
+            Song.mfcc_vector.isnot(None),
+            ~Song.song_id.in_(played_ids) if played_ids else True,
+        ).all()
+
+        if not candidates:
+            return []
+
+        # Score each candidate with LinUCB
+        scored = []
+        for song in candidates:
+            state = db.query(BanditState).filter_by(song_id=song.song_id).first()
+            if state and (state.play_count or 0) + (state.skip_count or 0) > 0:
+                ucb = compute_ucb_score(song, state)
+            else:
+                # Cold start — use exploration bonus only
+                x = _build_context(song)
+                ucb = float(ALPHA * np.sqrt(x @ x))  # Pure exploration
+
+            scored.append({
+                "song_id": song.song_id,
+                "title":   song.title,
+                "artist":  song.artist,
+                "genre":   song.genre,
+                "ucb_score": round(ucb, 6),
+            })
+
+        scored.sort(key=lambda x: x["ucb_score"], reverse=True)
+        return scored[:count]
+
+    except Exception as e:
+        logger.error(f"select_next_songs failed: {e}", exc_info=True)
+        return []
     finally:
         db.close()

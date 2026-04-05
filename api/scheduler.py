@@ -36,14 +36,24 @@ def _weekend_playlist_job():
 
 
 def _retrain_als_job():
-    """Retrains ALS model weekly (Sunday midnight) as history grows."""
-    logger.info("Retraining ALS model...")
+    """Retrains ALS + LSTM models weekly (Sunday midnight) as history grows."""
+    logger.info("Retraining models...")
     try:
         from models.collaborative import train_als
         train_als()
         logger.info("ALS model retrained")
     except Exception as e:
         logger.error(f"ALS retrain failed: {e}", exc_info=True)
+
+    try:
+        from models.sequential import train_sequential
+        success = train_sequential()
+        if success:
+            logger.info("LSTM sequential model retrained")
+        else:
+            logger.info("LSTM training skipped (insufficient sessions)")
+    except Exception as e:
+        logger.error(f"LSTM retrain failed: {e}", exc_info=True)
 
 
 def start_scheduler():

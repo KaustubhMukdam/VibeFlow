@@ -66,3 +66,11 @@ oauth.json
 ytmusic_auth.json
 setup_ytmusic.py
 generate_mock_history.py
+frontend/sonic_obsidian/
+frontend/vibeflow_home_daily_recommendation/
+frontend/vibeflow_library_intel_analytics/
+frontend/vibeflow_listening_history/
+frontend/vibeflow_sonic_dna/
+frontend/vibeflow_weekend_vibe_playlist/
+docs/codebase_review.md
+docs/walkthrough.md
