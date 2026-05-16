@@ -1,0 +1,434 @@
+{
+  "0": {
+    "cluster_id": 0,
+    "confirmed_genre": "Uncategorized",
+    "sample_songs": [
+      {
+        "song_id": 363,
+        "title": "APT. (feat. Bruno Mars)",
+        "artist": "ROSÉ",
+        "file_path": "D:\\Programming\\portfolio_projects\\VibeFlow\\music_library\\ROSE_BLACKPINK_-_APT_Bruno_Mars.mp3"
+      },
+      {
+        "song_id": 30,
+        "title": "Ask About",
+        "artist": "Karan Randhawa",
+        "file_path": "D:\\Programming\\portfolio_projects\\VibeFlow\\music_library\\Ask About - Karan Randhawa (DJJOhAL.Com).mp3"
+      },
+      {
+        "song_id": 197,
+        "title": "Ask About",
+        "artist": "Karan Randhawa",
+        "file_path": "D:\\Programming\\portfolio_projects\\VibeFlow\\music_library\\Karan Randhawa - Ask About (SPOTISAVER).mp3"
+      },
+      {
+        "song_id": 34,
+        "title": "Average - Lofi",
+        "artist": "Karan Randhawa",
+        "file_path": "D:\\Programming\\portfolio_projects\\VibeFlow\\music_library\\Average - Lofi.mp3"
+      },
+      {
+        "song_id": 201,
+        "title": "Average - Lofi",
+        "artist": "Karan Randhawa",
+        "file_path": "D:\\Programming\\portfolio_projects\\VibeFlow\\music_library\\Karan Randhawa - Average - Lofi (SPOTISAVER).mp3"
+      }
+    ]
+  },
+  "1": {
+    "cluster_id": 1,
+    "confirmed_genre": "Mixed-4",
+    "sample_songs": [
+      {
+        "song_id": 12,
+        "title": "Adhi Raat (Love Thunder)-(Mr-Jat.in)",
+        "artist": "Jass Manak",
+        "file_path": "D:\\Programming\\portfolio_projects\\VibeFlow\\music_library\\Adhi Raat (Love Thunder)-(Mr-Jat.in).mp3"
+      },
+      {
+        "song_id": 22,
+        "title": "Allah",
+        "artist": "Jass Manak",
+        "file_path": "D:\\Programming\\portfolio_projects\\VibeFlow\\music_library\\Allah.mp3"
+      },
+      {
+        "song_id": 32,
+        "title": "Athroo",
+        "artist": "Karan Randhawa",
+        "file_path": "D:\\Programming\\portfolio_projects\\VibeFlow\\music_library\\Athroo.mp3"
+      },
+      {
+        "song_id": 199,
+        "title": "Athroo",
+        "artist": "Karan Randhawa",
+        "file_path": "D:\\Programming\\portfolio_projects\\VibeFlow\\music_library\\Karan Randhawa - Athroo (SPOTISAVER).mp3"
+      },
+      {
+        "song_id": 40,
+        "title": "Bad Munda",
+        "artist": "Jass Manak/Emiway Bantai",
+        "file_path": "D:\\Programming\\portfolio_projects\\VibeFlow\\music_library\\Bad Munda.mp3"
+      }
+    ]
+  },
+  "2": {
+    "cluster_id": 2,
+    "confirmed_genre": "JassKaran",
+    "sample_songs": [
+      {
+        "song_id": 11,
+        "title": "Addiction",
+        "artist": "Jass Manak",
+        "file_path": "D:\\Programming\\portfolio_projects\\VibeFlow\\music_library\\Addiction.mp3"
+      },
+      {
+        "song_id": 2,
+        "title": "Addiction Love Thunder",
+        "artist": "Jass Manak",
+        "file_path": "D:\\Programming\\portfolio_projects\\VibeFlow\\music_library\\128-Addiction Love Thunder - Love Thunder 128 Kbps.mp3"
+      },
+      {
+        "song_id": 57,
+        "title": "Bunk",
+        "artist": "Karan Randhawa",
+        "file_path": "D:\\Programming\\portfolio_projects\\VibeFlow\\music_library\\Bunk Ft Sudesh Kumari - Karan Randhawa (DJJOhAL.Com).mp3"
+      },
+      {
+        "song_id": 275,
+        "title": "Bunk",
+        "artist": "Karan Randhawa, Sudesh Kumari",
+        "file_path": "D:\\Programming\\portfolio_projects\\VibeFlow\\music_library\\Karan Randhawa, Sudesh Kumari - Bunk (SPOTISAVER).mp3"
+      },
+      {
+        "song_id": 91,
+        "title": "Dooron Dooron",
+        "artist": "Karan Randhawa",
+        "file_path": "D:\\Programming\\portfolio_projects\\VibeFlow\\music_library\\Dooron Dooron.mp3"
+      }
+    ]
+  },
+  "3": {
+    "cluster_id": 3,
+    "confirmed_genre": "Mixed-3",
+    "sample_songs": [
+      {
+        "song_id": 406,
+        "title": "Aankhon Mein Doob Jaane Ko - THE 9TEEN, Sandesh Shandilya",
+        "artist": "THE 9TEEN, Sandesh Shandilya",
+        "file_path": "D:\\Programming\\portfolio_projects\\VibeFlow\\music_library\\SpotifyMate.com - Aankhon Mein Doob Jaane Ko - THE 9TEEN.mp3"
+      },
+      {
+        "song_id": 10,
+        "title": "Addicted (RiskyjaTT.CoM)",
+        "artist": "Tegi Pannu (RiskyjaTT.CoM)",
+        "file_path": "D:\\Programming\\portfolio_projects\\VibeFlow\\music_library\\Addicted.mp3"
+      },
+      {
+        "song_id": 407,
+        "title": "Allah Maaf Kare",
+        "artist": "Pritam",
+        "file_path": "D:\\Programming\\portfolio_projects\\VibeFlow\\music_library\\SpotifyMate.com - Allah Maaf Kare - Pritam.mp3"
+      },
+      {
+        "song_id": 25,
+        "title": "Apa Fer Milange (Djjohal.fm)",
+        "artist": "Savi Kahlon (Djjohal.fm)",
+        "file_path": "D:\\Programming\\portfolio_projects\\VibeFlow\\music_library\\Apa Fer Milange - Djjohal.fm.mp3"
+      },
+      {
+        "song_id": 26,
+        "title": "Apna Bana Le",
+        "artist": "Sachin-Jigar, Arijit Singh, Amitabh Bhattacharya",
+        "file_path": "D:\\Programming\\portfolio_projects\\VibeFlow\\music_library\\Apna Bana Le.mp3"
+      }
+    ]
+  },
+  "4": {
+    "cluster_id": 4,
+    "confirmed_genre": "Punjabi",
+    "sample_songs": [
+      {
+        "song_id": 5,
+        "title": "5-7 Yaar",
+        "artist": "Karan Randhawa",
+        "file_path": "D:\\Programming\\portfolio_projects\\VibeFlow\\music_library\\5-7 Yaar.mp3"
+      },
+      {
+        "song_id": 195,
+        "title": "5-7 Yaar",
+        "artist": "Karan Randhawa",
+        "file_path": "D:\\Programming\\portfolio_projects\\VibeFlow\\music_library\\Karan Randhawa - 5-7 Yaar (SPOTISAVER).mp3"
+      },
+      {
+        "song_id": 50,
+        "title": "Boss",
+        "artist": "Jass Manak",
+        "file_path": "D:\\Programming\\portfolio_projects\\VibeFlow\\music_library\\Boss.mp3"
+      },
+      {
+        "song_id": 203,
+        "title": "Chan Chanani",
+        "artist": "Karan Randhawa",
+        "file_path": "D:\\Programming\\portfolio_projects\\VibeFlow\\music_library\\Karan Randhawa - Chan Chanani (SPOTISAVER).mp3"
+      },
+      {
+        "song_id": 62,
+        "title": "Chandigarh",
+        "artist": "Jass Manak/Guri",
+        "file_path": "D:\\Programming\\portfolio_projects\\VibeFlow\\music_library\\Chandigarh.mp3"
+      }
+    ]
+  },
+  "5": {
+    "cluster_id": 5,
+    "confirmed_genre": "Mixed-2 (Punjabi)",
+    "sample_songs": [
+      {
+        "song_id": 14,
+        "title": "Adhi Raat",
+        "artist": "Jass Manak",
+        "file_path": "D:\\Programming\\portfolio_projects\\VibeFlow\\music_library\\Adhi Raat.mp3"
+      },
+      {
+        "song_id": 13,
+        "title": "Adhi Raat - From \"Love Thunder\"",
+        "artist": "Jass Manak",
+        "file_path": "D:\\Programming\\portfolio_projects\\VibeFlow\\music_library\\Adhi Raat - From -Love Thunder-.mp3"
+      },
+      {
+        "song_id": 15,
+        "title": "Admirin' You (feat. Preston Pablo)",
+        "artist": "Karan Aujla, Ikky, Preston Pablo",
+        "file_path": "D:\\Programming\\portfolio_projects\\VibeFlow\\music_library\\Admirin' You (feat. Preston Pablo).mp3"
+      },
+      {
+        "song_id": 189,
+        "title": "Admirin' You (feat. Preston Pablo)",
+        "artist": "Karan Aujla, Ikky, Preston Pablo",
+        "file_path": "D:\\Programming\\portfolio_projects\\VibeFlow\\music_library\\Karan Aujla, Ikky, Preston Pablo - Admirin' You (feat. Preston Pablo) (SPOTISAVER).mp3"
+      },
+      {
+        "song_id": 78,
+        "title": "Daku (RiskyjaTT.CoM)",
+        "artist": "Inderpal Moga (RiskyjaTT.CoM)",
+        "file_path": "D:\\Programming\\portfolio_projects\\VibeFlow\\music_library\\Daku.mp3"
+      }
+    ]
+  },
+  "6": {
+    "cluster_id": 6,
+    "confirmed_genre": "Love (Punjabi and English)",
+    "sample_songs": [
+      {
+        "song_id": 18,
+        "title": "Adtaan",
+        "artist": "Jass Manak",
+        "file_path": "D:\\Programming\\portfolio_projects\\VibeFlow\\music_library\\Adtaan.mp3"
+      },
+      {
+        "song_id": 17,
+        "title": "Adtaan (Raag.Fm)",
+        "artist": "Jass Manak (Raag.Fm)",
+        "file_path": "D:\\Programming\\portfolio_projects\\VibeFlow\\music_library\\Adtaan - (Raag.Fm).mp3"
+      },
+      {
+        "song_id": 511,
+        "title": "Attention",
+        "artist": "Charlie Puth",
+        "file_path": "D:\\Programming\\portfolio_projects\\VibeFlow\\music_library\\[SPOTDOWNLOADER.COM] Attention.mp3"
+      },
+      {
+        "song_id": 510,
+        "title": "Attention - Acoustic",
+        "artist": "Charlie Puth",
+        "file_path": "D:\\Programming\\portfolio_projects\\VibeFlow\\music_library\\[SPOTDOWNLOADER.COM] Attention - Acoustic.mp3"
+      },
+      {
+        "song_id": 190,
+        "title": "Bachke Bachke (feat. Yarah)",
+        "artist": "Karan Aujla, Ikky, Yarah",
+        "file_path": "D:\\Programming\\portfolio_projects\\VibeFlow\\music_library\\Karan Aujla, Ikky, Yarah - Bachke Bachke (feat. Yarah) (SPOTISAVER)-2.mp3"
+      }
+    ]
+  },
+  "7": {
+    "cluster_id": 7,
+    "confirmed_genre": "Energize",
+    "sample_songs": [
+      {
+        "song_id": 1,
+        "title": "33 Max Verstappen",
+        "artist": "Carte Blanq and Maxx Power",
+        "file_path": "D:\\Programming\\portfolio_projects\\VibeFlow\\music_library\\01-carte_blanq_and_maxx_power_-_33_max_verstappen-zzzz.mp3"
+      },
+      {
+        "song_id": 507,
+        "title": "5 Taara",
+        "artist": "Diljit Dosanjh/Jatinder Shah",
+        "file_path": "D:\\Programming\\portfolio_projects\\VibeFlow\\music_library\\[SPOTDOWNLOADER.COM] 5 Taara.mp3"
+      },
+      {
+        "song_id": 179,
+        "title": "ANTIDOTE",
+        "artist": "Karan Aujla",
+        "file_path": "D:\\Programming\\portfolio_projects\\VibeFlow\\music_library\\Karan Aujla - ANTIDOTE (SPOTISAVER).mp3"
+      },
+      {
+        "song_id": 36,
+        "title": "AZUL (RiskyjaTT.CoM)",
+        "artist": "Guru Randhawa (RiskyjaTT.CoM)",
+        "file_path": "D:\\Programming\\portfolio_projects\\VibeFlow\\music_library\\AZUL.mp3"
+      },
+      {
+        "song_id": 509,
+        "title": "Akhiyaan Gulaab (From \"Teri Baaton Mein Aisa Uljha Jiya\")",
+        "artist": "Mitraz",
+        "file_path": "D:\\Programming\\portfolio_projects\\VibeFlow\\music_library\\[SPOTDOWNLOADER.COM] Akhiyaan Gulaab (From -Teri Baaton Mein Aisa Uljha Jiya-).mp3"
+      }
+    ]
+  },
+  "8": {
+    "cluster_id": 8,
+    "confirmed_genre": "Almost Energize",
+    "sample_songs": [
+      {
+        "song_id": 182,
+        "title": "52 Bars",
+        "artist": "Karan Aujla, Ikky",
+        "file_path": "D:\\Programming\\portfolio_projects\\VibeFlow\\music_library\\Karan Aujla, Ikky - 52 Bars (SPOTISAVER).mp3"
+      },
+      {
+        "song_id": 6,
+        "title": "8 ASLE - SUKHA | GURLEZ AKHTAR | CHANI NATTAN | PRODGK",
+        "artist": "SUKHA",
+        "file_path": "D:\\Programming\\portfolio_projects\\VibeFlow\\music_library\\8 ASLE.mp3"
+      },
+      {
+        "song_id": 7,
+        "title": "Aap Ki Ankhon Mein Kuch",
+        "artist": "Kishore Kumar, Lata Mangeshkar, R. D. Burman",
+        "file_path": "D:\\Programming\\portfolio_projects\\VibeFlow\\music_library\\Aap Ki Ankhon Mein Kuch.mp3"
+      },
+      {
+        "song_id": 19,
+        "title": "Age 19",
+        "artist": "DIVINE/Jass Manak",
+        "file_path": "D:\\Programming\\portfolio_projects\\VibeFlow\\music_library\\Age 19.mp3"
+      },
+      {
+        "song_id": 35,
+        "title": "Average",
+        "artist": "Karan Randhawa",
+        "file_path": "D:\\Programming\\portfolio_projects\\VibeFlow\\music_library\\Average.mp3"
+      }
+    ]
+  },
+  "9": {
+    "cluster_id": 9,
+    "confirmed_genre": "Uncategorized",
+    "sample_songs": [
+      {
+        "song_id": 508,
+        "title": "Aasa Kooda - From \"Think Indie\"",
+        "artist": "Sai Abhyankkar/Sai Smriti",
+        "file_path": "D:\\Programming\\portfolio_projects\\VibeFlow\\music_library\\[SPOTDOWNLOADER.COM] Aasa Kooda - From -Think Indie-.mp3"
+      },
+      {
+        "song_id": 16,
+        "title": "Admirin' You - Unplugged",
+        "artist": "Karan Aujla",
+        "file_path": "D:\\Programming\\portfolio_projects\\VibeFlow\\music_library\\Admirin' You - Unplugged.mp3"
+      },
+      {
+        "song_id": 512,
+        "title": "Baarish",
+        "artist": "Shashaa Tirupati/Ash King",
+        "file_path": "D:\\Programming\\portfolio_projects\\VibeFlow\\music_library\\[SPOTDOWNLOADER.COM] Baarish.mp3"
+      },
+      {
+        "song_id": 56,
+        "title": "Bunk - Lofi",
+        "artist": "Karan Randhawa/Sudesh Kumari",
+        "file_path": "D:\\Programming\\portfolio_projects\\VibeFlow\\music_library\\Bunk - Lofi.mp3"
+      },
+      {
+        "song_id": 276,
+        "title": "Bunk - Lofi",
+        "artist": "Karan Randhawa, Sudesh Kumari",
+        "file_path": "D:\\Programming\\portfolio_projects\\VibeFlow\\music_library\\Karan Randhawa, Sudesh Kumari - Bunk - Lofi (SPOTISAVER).mp3"
+      }
+    ]
+  },
+  "10": {
+    "cluster_id": 10,
+    "confirmed_genre": "Mixed-1 (Punjabi and English)",
+    "sample_songs": [
+      {
+        "song_id": 31,
+        "title": "Asla",
+        "artist": "Karan Randhawa",
+        "file_path": "D:\\Programming\\portfolio_projects\\VibeFlow\\music_library\\Asla.mp3"
+      },
+      {
+        "song_id": 198,
+        "title": "Asla",
+        "artist": "Karan Randhawa",
+        "file_path": "D:\\Programming\\portfolio_projects\\VibeFlow\\music_library\\Karan Randhawa - Asla (SPOTISAVER).mp3"
+      },
+      {
+        "song_id": 408,
+        "title": "Asle Nal Yari - From \"Tufang\"",
+        "artist": "Lucas",
+        "file_path": "D:\\Programming\\portfolio_projects\\VibeFlow\\music_library\\SpotifyMate.com - Asle Nal Yari - From _Tufang_ - Lucas.mp3"
+      },
+      {
+        "song_id": 65,
+        "title": "Changes",
+        "artist": "Charlie Puth",
+        "file_path": "D:\\Programming\\portfolio_projects\\VibeFlow\\music_library\\Charlie Puth - Changes (SPOTISAVER).mp3"
+      },
+      {
+        "song_id": 63,
+        "title": "Chann",
+        "artist": "Karan Randhawa",
+        "file_path": "D:\\Programming\\portfolio_projects\\VibeFlow\\music_library\\Chann.mp3"
+      }
+    ]
+  },
+  "11": {
+    "cluster_id": 11,
+    "confirmed_genre": "Kind of Slow (Punjabi edition)",
+    "sample_songs": [
+      {
+        "song_id": 9,
+        "title": "Acting",
+        "artist": "Karan Randhawa",
+        "file_path": "D:\\Programming\\portfolio_projects\\VibeFlow\\music_library\\Acting.mp3"
+      },
+      {
+        "song_id": 196,
+        "title": "Acting",
+        "artist": "Karan Randhawa",
+        "file_path": "D:\\Programming\\portfolio_projects\\VibeFlow\\music_library\\Karan Randhawa - Acting (SPOTISAVER).mp3"
+      },
+      {
+        "song_id": 48,
+        "title": "Blue Mountain (RiskyjaTT.CoM)",
+        "artist": "Cheema Y (RiskyjaTT.CoM)",
+        "file_path": "D:\\Programming\\portfolio_projects\\VibeFlow\\music_library\\Blue Mountain.mp3"
+      },
+      {
+        "song_id": 122,
+        "title": "Braat",
+        "artist": "Guri",
+        "file_path": "D:\\Programming\\portfolio_projects\\VibeFlow\\music_library\\Guri - Braat (SPOTISAVER).mp3"
+      },
+      {
+        "song_id": 52,
+        "title": "Braat (RiskyjaTT.CoM)",
+        "artist": "Guri (RiskyjaTT.CoM)",
+        "file_path": "D:\\Programming\\portfolio_projects\\VibeFlow\\music_library\\Braat (Djjohal).mp3"
+      }
+    ]
+  }
+}

@@ -1,3 +1,7 @@
-Phases
-docs
-stitch
+music_library/
+docs/
+.env
+tests/
+venv/
+__pycache__
+vibeflow.db
